@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pago nomina</title>
+    <link rel="stylesheet"  href="/estilos/estilos.css" >
+    
+    
+    
+</head>
+
+
+<body id="body">
+
+
+  
+  <div id="maintable">
+
+    <form  id="formulario" action="/backend/registros.php"     method="post">
+
+    <header id="header">
+      <h1 class="titulo"   >PAGO DE NOMINA</h1>  
+      <h3  class="titulo">NACIONAL DE CHOCOLATES S.A </h3>
+    </header>
+
+   <div id="table1">
+
+     
+  <label>EMPLEADO<input class="datos" type="text"  name="empleado"  id="empleado" size="25px" placeholder=" nombre del empleado"required ></input></label> 
+      
+  <label>CEDULA<input class="datos" type="text" name="cedula" id="cedula" size="16px" placeholder="introduce los numeros" required></input></label> 
+     
+  <label >SECCION</label>
+    <select class="datos"  id="seccion" name="seccion">
+           <option value="">--SECCION--</option>
+           <option value="administracion">administracion</option>
+           <option value="contabilidad">contabilidad</option>
+           <option value="ventas">ventas</option>
+           <option value="produccion">produccion</option>
+           <option value="calidad">calidad</option>
+           <option value="almacen">almacen</option>
+           <option value="otros">otros</option>
+    </select> 
+      
+ 
+    <label >CARGO</label>
+      <select class="datos"  id="cargo" name="cargo">
+               <option value="">--CARGO--</option>
+               <option value="jefe">jefe</option>
+               <option value="auxiliar">auxiliar</option>
+               <option value="calidad">calidad</option>
+               <option value="lider">lider</option>
+               <option value="mecanico">mecanico</option>
+               <option value="operario">operario</option>
+    </select>
+          
+     <label>FECHA PAGO<input class="datos" type="text" name="fecha" id="fecha" size="10px" placeholder="DD/MM/AA" ></input></label> 
+
+     
+  </div>
+
+
+  <div id="table2">
+    
+    <p style=" width: 100px;">Payroll v1.0</p>
+    
+     <input class="inputs2" type="number" name="devengados" id="devengado" size="10px" placeholder="0,00" ></input>
+                                                   
+     <input class="inputs2" type="number" name="transporte" id="transporte" size="10px" placeholder="0,00" ></input>
+    
+     <input class="inputs2" type="number" name="pension" id="pension" size="10px" placeholder="0,00" > </input>
+  
+     <input class="inputs2" type="number" name="salud" id="salud" size="10px" placeholder="0,00" ></input>
+
+     <input class="inputs2" type="text" name="totalpagar" id="totalapagar" size="10px" placeholder="0.00" ></input>
+  
+     <button class="boton inputs2 "  type="submit"  id="submit">GUARDAR DATOS</button>
+
+     <button class="boton inputs2" id="buscar" ><a id="buscar" href="http://localhost/pagonomina/consultas2.php">BUSCAR</a></button>
+
+       <div id="labels"><span class="sp1">TOTAL DEVENGADOS</span>
+                        <span class="sp1">SUBSIDIO DE TRANSPORTE</span>
+                        <span class="sp1">DEDUCCION PENSION</span>
+                        <span class="sp1">DEDUCCION SALUD</span>
+                        <span class="sp1">TOTAL A PAGAR</span>
+      </div>
+
+</div>
+
+<div id="table3">
+   
+    
+
+    <input class="inputs" type="number" name="salario" id="salario" placeholder="0,00" required></input>
+    
+    <input class="inputs" type="number" name="hordinarias" id="ordinarias" size="10px" placeholder="0"  required></input>
+
+    <input class="inputs" type="number" name="hfestivas" id="festivas" size="10px" placeholder="0" ></input>
+        
+    <input class="inputs"  type="number" name="hextras" id="extras" size="10px" placeholder="0"></input>
+         
+    <input class="inputs" type="number" name="hextrasfes" id="extrasfestivas" size="10px" placeholder="0" ></input>
+    
+    <input class="inputs" type="number" name="hnocturnas" id="nocturnas" size="10px" placeholder="0" ></input>
+         
+    <input class="inputs" type="number" name="hextrasnoc" id="horas_noc_extras" size="10px" placeholder="0" ></input>
+         
+    <input class="inputs" type="number" name="hextnocfes" id="extnocfes" size="10px" placeholder="0" ></input>
+
+    <div id="labels2">
+      <span class="sp2">SALARIO BASICO</span>
+      <span class="sp2">HORAS ORDINARIA </span>
+      <span class="sp2">HORAS FESTIVAS  O DOMINICAL</span>
+      <span class="sp2">HORAS EXTRAS</span>
+      <span class="sp2">HORAS EXTRAS FESTIVAS</span>
+      <span class="sp2">HORAS  NOCTURNAS</span>
+      <span class="sp2">HORAS EXTRAS  NOCTURNAS</span>
+      <span class="sp2">HORAS EXTRAS NOCTURNAS FESTIVAS</span>
+</div>
+
+        
+    <button class="agregarval" type="button" class="" id="btn1" onclick="principal()">AGREGAR VALORES</button>
+       
+</div>
+
+
+  
+  <div id="table4">
+
+        <div id="botones"><br>
+      <button class="boton" type="button" id="verificar" onclick='actualizar()'> ACTUALIZAR PAGINA</button>
+      <button class="boton" type="button" id="editar" onclick="verificarpago()" >VERIFICAR PAGO</button><br><br>
+      <button class="boton" type="button" id="pagar" onclick="realizarpago()" >  REALIZAR PAGO</button>
+      <button class="boton"><a id="link" href="/backend/imprimir.php">GENERAR COLILLA</a></button>
+      <button type="button" class="boton"><a  class="" onclick="informacion()">INFORMACION</a></button>
+
+        </div>
+
+        <div id="pantalla2">
+          <center>Informacion</center>
+          <div id="informacion">
+
+
+
+          </div>
+         </div>
+
+  </div>
+</form>
+</div>
+
+
+<!--
+<footer id="footer"> CA MEJIA & CIA S A DERECHOS RESERVADOS <br>   COPYRIGHT ZALDA 2022-2024
+
+</footer>
+-->
+<script src="/script/app.js"></script>
+</body>
+</html>
