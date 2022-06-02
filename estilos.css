@@ -1,0 +1,391 @@
+*{
+   margin: 0;
+   padding: 0;
+   transition: all 0.5s;
+}
+
+#body{
+   position: absolute;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 15px;
+   background: rgba(35, 102, 87, 0.623);
+   font-family: inherit;
+   color: rgb(16, 4, 4);
+   margin: auto;
+   left: 8px;
+  
+}
+
+#maintable{
+   width: 1500px;
+   height: 800px;
+   box-sizing: border-box;
+  
+   
+   
+}
+
+#header{
+   position: absolute;
+   border: solid 1px;
+   
+   width:1500px;
+   height: 100px;
+   left: 0;
+   right: 0;
+   margin: 4px 0px 4px 0px;
+   box-sizing: border-box;
+   
+   
+}
+   
+#table1{
+   position: absolute;
+   top: 100px;
+   width: 1500px;
+   height: 70px;
+   background-color: rgb(168, 219, 155);
+   border: solid 1px;
+   font-size:16px ;
+   box-sizing: border-box;
+   padding: 5px;
+}
+
+.datos{
+   margin:5px 10px 5px 10px;
+   font-size:15px ;
+}
+
+#table2{
+   position: absolute;
+   border: solid 1px;
+   width:50% ;
+   height:50%;
+   top:170px;
+   right: 0;
+   box-sizing: border-box;
+   padding:10px 0px 10px 2px ;
+}
+
+.inputs2{
+   display:block;
+   margin:4px 4px 10px 4px;
+   padding: 5PX 0PX 5PX 0PX;
+   margin: 18px 0px 18px 0px ;
+   
+}
+
+#buscar{
+   text-decoration: none;
+   color: #000000;
+}
+
+#labels{
+   width: 30%;
+   height:100% ;
+   position: absolute;
+   right: 330px;
+   bottom: 0px;
+   padding: 38px 0px 25px 0px;
+   box-sizing: border-box;
+   font-size: 15px;
+}
+.sp1 {
+   display:block;
+   box-sizing: border-box;
+   padding:15px 0px 15px 0px;
+} 
+
+
+
+#table3{
+   position: absolute;
+   width:50% ;
+   height:50%;
+   top:170px;
+   left: 0;
+   padding:10px 0px 10px 2px ;
+   border: solid 1px;
+  box-sizing: border-box;
+}
+
+.inputs{
+       display:block;
+       margin: 10px 0px 10px 0px ;
+       padding: 5px 0px 5px 0px;
+       width: 150px;
+}
+
+.agregarval{
+   position: absolute;
+   display:inline-block;
+   margin:4px ;
+   bottom: 2px;
+   left: 0px;
+   background-color: rgba(247, 255, 242, 0.781);
+   cursor: pointer;
+   border-radius: 4px ;
+   height:38px;
+   font-size:13px ;
+   width:120px ;
+   padding: 5px;
+   box-sizing: border-box;
+}
+
+.agregarval:hover{
+   background-color: rgb(146, 211, 138);
+   border-radius:20px ;
+   
+}
+
+#labels2{
+   
+   width: 40%;
+   height:100% ;
+   position: absolute;
+   right: 270px;
+   bottom: 0px;
+   padding: 15px 0px 15px 0px;
+   box-sizing: border-box;
+   font-size: 15px;
+   
+}
+.sp2 {
+   
+   display:block;
+   box-sizing: border-box;
+   padding:5px 0px 5px 0px;
+   margin: 9px 0px 0px 0px;
+} 
+
+
+
+#botones{
+    position: absolute;
+    bottom:80px ;
+    border: solid 1px;
+    width:50% ;
+    height:150px;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+
+}
+
+#pantalla2{
+  position: absolute;
+   width:50%;
+   height:150px;
+   border: solid 1px;
+   bottom:80px ;
+   right: 0;
+   color:#000000; 
+   box-sizing: border-box; 
+}
+
+.titulo{
+   height:48px ;
+   text-align: center;
+   color: black;
+   text-shadow: 2px 2px 2px #625353;
+   background-color: rgb(173, 167, 167);
+   font-size:25px ;
+   
+}   
+
+#footer{
+   position: absolute;
+   bottom: 0;
+   color: #000000;
+}
+
+
+
+
+.boton{
+  
+   background-color: rgba(247, 255, 242, 0.781);
+   cursor: pointer;
+   border-radius: 4px ;
+   height:38px;
+   font-size:13px ;
+   width:120px ;
+   padding: 5px;
+   box-sizing: border-box;
+}
+
+#link{
+   
+   font-size: 11px;
+   box-sizing: border-box;
+   color: #000000;
+   text-decoration: none;
+   color: #000000;
+}
+
+.boton:hover{
+   background-color: rgb(146, 211, 138);
+   border-radius:20px ;
+   
+}
+
+#p1{
+     background-color: rgb(33, 219, 16);
+     font-size:1rem ;
+}
+
+
+
+
+/*  responsive */
+
+@media ( max-width:800px){
+    
+#body{
+   margin: auto;
+
+    
+   } 
+
+  #maintable{ 
+   width: 320px;
+   height:800px ;
+   
+}
+
+#header, .titulo{
+   width: 320px;
+   height:25px ;
+   font-size: 15px;
+}
+
+#table1{
+   width: 320px;
+   height: 150px;
+   font-size: 8px ;
+   padding:5px;
+   top:50px ;
+   box-sizing: border-box;
+}
+
+#empleado,#cedula,#salario,#seccion,#cargo,#fecha{
+   width: 50px;
+   font-size: 8px;
+   display: block;
+   margin: 2px;
+   
+   
+
+}
+
+#table2{
+   width: 50%;
+   height: 300px;
+   font-size: 8px;
+   top: 200px;
+}
+
+#devengado,#transporte,#pension,#salud,#totalapagar,#submit,#buscar{
+   width: 50px;
+   font-size: 7px; 
+
+}
+
+#labels{
+   left: 60px;
+   font-size:  7px;
+   margin: 0px;
+   padding: 15px 0px 0px 0px;
+}
+
+.sp1{
+   margin: 10px 0px 0px 0px;
+   padding: 15px 0px 0px 0px;
+}
+
+
+
+
+#labels2{
+   left: 60px;
+   font-size:  7px;
+   margin: 0px;
+   padding: 10px 0px 0px 0px;
+}
+
+.sp2{
+   margin: 8px 0px 0px 0px;
+}
+
+#table3{
+   
+   width: 50%;
+   height:300px ;
+   font-size: 8px;
+   top: 200px;
+
+}
+
+#ordinarias,#festivas,#extras,#extrasfestivas,#nocturnas,#horas_noc_extras,#extnocfes{
+   width: 50px;
+   font-size: 8px; 
+   
+}
+
+#btn1{
+   font-size:8px ;
+   width:65% ;
+   height:7% ;
+}
+
+#table4{
+   width: 100%;
+   font-size: 8px;
+   top: 500px;
+   
+}
+
+#botones{
+   width: 50%;
+   font-size: 8px;
+   top: 500px;
+   border: solid 1px;
+}
+
+#pantalla2{
+   width: 50%;
+   font-size: 8px;
+   top: 500px;
+   border: solid 1px;
+}
+
+.boton,#link{
+   width:65% ;
+   height:12% ;
+   font-size: 8px;
+   margin: 5px 0px 0px 0px;
+   
+}
+
+#submit,#buscar{
+   font-size:8px ;
+   width:65% ;
+   height:7% ;
+}
+
+
+
+
+}
+
+
+ 
+
+
+
+
+
+
+
+
+
