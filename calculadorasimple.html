@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+  
+</head>
+<body>
+
+
+   <div id="calculator">
+       <form name="calculadora">
+    
+        <input class="display" type="text" name="answer" value="" placeholder="0.00">
+    
+
+        <div id="div1">
+          <input type="button" value="7" class="btn"  onclick="document.calculadora.answer.value+='7'">
+          <input type="button" value="8" class="btn" onclick="document.calculadora.answer.value+='8'">
+          <input type="button" value="9" class="btn" onclick="document.calculadora.answer.value+='9'">
+          <input type="button" value="+" class="btn" onclick="document.calculadora.answer.value+='+'">
+        </div>
+
+
+        <div id="div2">
+          <input type="button" value="4" class="btn" onclick="document.calculadora.answer.value+='4'">
+          <input type="button" value="5" class="btn" onclick="document.calculadora.answer.value+='5'">
+          <input type="button" value="6" class="btn" onclick="document.calculadora.answer.value+='6'">
+          <input type="button" value="-" class="btn" onclick="document.calculadora.answer.value+='-'">
+        </div>
+
+     <div id="div3">
+          <input type="button" value="1" class="btn" onclick="document.calculadora.answer.value+='1'">
+          <input type="button" value="2" class="btn" onclick="document.calculadora.answer.value+='2'">
+          <input type="button" value="3" class="btn" onclick="document.calculadora.answer.value+='3'">
+          <input type="button" value="*" class="btn" onclick="document.calculadora.answer.value+='*'">
+    </div>
+
+    <div id="div4">
+          <input type="button" value="0" class="btn" onclick="document.calculadora.answer.value+='0'">
+          <input type="reset" value="C" class="btn">
+          <input type="button" value="=" class="btn" onclick="document.calculadora.answer.value=eval(document.calculadora.answer.value)">
+          <input type="button" value="/" class="btn" onclick="document.calculadora.answer.value+='/'">
+    </div>
+
+    <div id="text">
+      <p>Desarrollado por Zalda</p>
+
+    </div>
+
+
+       </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
